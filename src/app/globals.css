@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: ui-sans-serif, system-ui, sans-serif;
+    --font-display: Georgia, serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-sand-50 text-ink-800 font-sans antialiased;
+  }
+
+  /* Headings use the display face and tighter tracking. */
+  h1,
+  h2,
+  h3 {
+    @apply font-display text-ink-900;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Visible focus ring for keyboard users, suppressed for mouse clicks. */
+  :focus-visible {
+    @apply outline-none ring-2 ring-sage-500 ring-offset-2 ring-offset-sand-50;
+  }
+
+  /* Anchor offset so section headings clear the sticky header. */
+  [id] {
+    scroll-margin-top: 6rem;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-content px-5 sm:px-6 lg:px-8;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3
+           text-[0.95rem] font-semibold leading-none transition
+           focus-visible:outline-none focus-visible:ring-2
+           focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .btn-primary {
+    @apply btn bg-sage-600 text-white shadow-card hover:bg-sage-700
+           focus-visible:ring-sage-500;
+  }
+
+  .btn-secondary {
+    @apply btn border border-ink-200 bg-white text-ink-800 hover:border-ink-300
+           hover:bg-sand-50 focus-visible:ring-sage-500;
+  }
+
+  .btn-ghost {
+    @apply btn text-sage-700 hover:bg-sage-50 focus-visible:ring-sage-500;
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.14em] text-sage-600;
+  }
+
+  .card {
+    @apply rounded-3xl border border-ink-100 bg-white p-6 shadow-card;
+  }
+
+  /* Long-form body copy: services, areas, about. */
+  .prose-local {
+    @apply text-[1.0625rem] leading-[1.75] text-ink-700;
+  }
+
+  .prose-local p + p {
+    @apply mt-4;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Print: drop the furniture, keep the useful parts. */
+@media print {
+  header,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+}
