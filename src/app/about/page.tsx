@@ -110,7 +110,22 @@ export default function AboutPage() {
           line about her family above, not as decoration. Square on purpose: the
           source is 1:1, so nothing is cropped. The headshot frame in the hero is
           still a placeholder and still needs a real face-forward photo. */}
-      {/* ⚠️ Stephanie + dog photo goes here — image pending upload. */}
+      <div className="container-page pb-16 lg:pb-20">
+        <figure className="mx-auto max-w-md">
+          <div className="relative aspect-square w-full overflow-hidden rounded-4xl border border-ink-100 bg-sand-100 shadow-lift">
+            <Image
+              src="/images/stephanie picture.jpg"
+              alt={`${site.founder.name} crouching beside her dog in a park in White Rock`}
+              fill
+              sizes="(max-width: 768px) 100vw, 28rem"
+              className="object-cover"
+            />
+          </div>
+          <figcaption className="mt-3 text-center text-[0.875rem] text-ink-500">
+            {site.founder.name.split(' ')[0]}, off the clock.
+          </figcaption>
+        </figure>
+      </div>
 
       <Section
         tone="white"
