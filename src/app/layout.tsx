@@ -69,6 +69,9 @@ export const metadata: Metadata = {
     siteName: site.name,
     url: site.url,
   },
+  // Google Search Console ownership (Stephanie's Google account). Removing
+  // this un-verifies the property.
+  verification: { google: '8CT9XMt9DUKkIAKp30D7zTvA-U-byrRxug7Y1pLo81Q' },
   icons: {
     icon: [{ url: '/icon.png', type: 'image/png', sizes: '64x64' }],
     apple: [{ url: '/apple-touch-icon.png', sizes: '512x512' }],
