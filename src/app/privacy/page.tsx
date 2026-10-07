@@ -12,7 +12,7 @@ export const metadata: Metadata = pageMeta({
 /* ─────────────────────────────────────────────────────────────────────────────
    ⚠️  PLAIN-LANGUAGE SUMMARY, NOT LEGAL ADVICE.
    This reflects how the site is actually built: one form, Google Analytics 4
-   and the Meta Pixel (both added 6 Oct 2026). If you add a booking embed or an
+   and the Meta Pixel (both added 6 Oct 2026), plus Google Tag Manager (7 Oct 2026). If you add a booking embed or an
    email platform, or remove either tag, this page has to be updated to match —
    PIPEDA and BC PIPA both expect disclosure of what is collected and why. Have
    a lawyer review it before relying on it.
@@ -83,6 +83,12 @@ export default function PrivacyPage() {
                   opt-out add-on
                 </a>
                 .
+              </p>
+              <p className="mt-2">
+                The site also loads <strong>Google Tag Manager</strong>, which is used to add
+                Google measurement, such as whether an ad led to a quote request, without
+                changing the site&rsquo;s code. Tag Manager does not collect anything on its own.
+                It only loads the Google tags set up inside it, and those work as described above.
               </p>
               <p className="mt-2">
                 This site also runs the <strong>Meta Pixel</strong>. It is an advertising tool: it
