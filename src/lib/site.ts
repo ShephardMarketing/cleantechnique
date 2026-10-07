@@ -106,9 +106,8 @@ export const site = {
   hoursLabel: 'Mon–Fri 9am–5pm · Sat 9am–3pm',
 
   social: {
-    // ⚠️ PLACEHOLDERS — delete any line that does not exist yet.
-    instagram: 'https://www.instagram.com/thecleantechnique',
-    facebook: 'https://www.facebook.com/thecleantechnique',
+    instagram: 'https://www.instagram.com/the_clean_technique/',
+    facebook: 'https://www.facebook.com/profile.php?id=61594843784213',
   },
 
   // ⚠️ PLACEHOLDER — paste the Google Business Profile review link once it exists.
